@@ -3,10 +3,10 @@
 , cmake
 , pkg-config
 , system
-, _tooling
+, lib
 ,
 }: let
-  craneLib = _tooling.crane.lib.${system};
+  craneLib = crane.lib.${system};
   rev = "71638e6540e2fc30bd609f8f78131ec10217f906";
 in craneLib.buildPackage {
   pname = "tcount";
@@ -25,4 +25,11 @@ in craneLib.buildPackage {
   ];
 
   doCheck = false;
+
+  meta = with lib; {
+    description = "Count your code by tokens and patterns in the syntax tree. A tokei/scc/cloc alternative.";
+    homepage = "https://github.com/RRethy/tcount";
+    license = licenses.mit;
+    maintainers = with maintainers; [ minion3665 ];
+  };
 }

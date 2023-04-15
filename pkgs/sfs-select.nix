@@ -1,4 +1,4 @@
-{ stdenv, p7zip, zip, python3, qt5 }: let
+{ stdenv, p7zip, zip, python3, qt5, lib }: let
   preExec = ''
   import os
   sfs_select_dir = os.path.expanduser('~/.local/share/Steam/sfs-select/runtime')
@@ -59,4 +59,24 @@ in stdenv.mkDerivation {
     ]))
   ];
   dontWrapQtApps = true;
+
+
+  meta = with lib; {
+    description = "a small tool to manage Steam Family Sharing";
+    longDescription = ''
+      When you get the same game from multiple sources steam selects which one to
+use. With often less than optimal results (i.e. chosing an much used source
+over a rarely used one). This makes an manual selection method desireable.
+Despite customer complaints since fall 2013 this has not yet implemented by
+Valve. sfs-select tries to offer that possibility.
+It allows you to temporatrily disable single sharing sources. That way you can
+disable a "in use" library in favor of unused ones. Additionally it can tweak
+the way steam uses to assign games to the active sources.
+It has both a GUI (for casual use) and a CLI (scripting, desktop shortcuts,
+...) mode. 
+    '';
+    homepage = "https://www.unix-ag.uni-kl.de/~t_schmid/sfs-select/";
+    license = licenses.gpl3Plus;
+    maintainers = with maintainers; [ minion3665 ];
+  };
 }

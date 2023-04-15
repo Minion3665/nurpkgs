@@ -1,4 +1,5 @@
 { fetchFromGitHub
+, lib
 , nodejs
 , stdenv
 , callPackage
@@ -35,4 +36,19 @@ stdenv.mkDerivation rec {
     sed -i "s#^cd .*#cd $out/#g" $out/bin/etherpad
     chmod +x $out/bin/etherpad
   '';
+
+
+  meta = with lib; {
+    description = "a highly customizable open source online editor providing collaborative editing in really real-time";
+    longDescription = ''
+      Etherpad is a highly customizable open source online editor providing collaborative editing in really real-time.
+
+      Etherpad allows you to edit documents collaboratively in real-time, much like a live multi-player editor that runs in your browser. Write articles, press releases, to-do lists, etc. together with your friends, fellow students or colleagues, all working on the same document at the same time.
+
+      All instances provide access to all data through a well-documented API and support import/export to many major data exchange formats. And if the built-in feature set isn't enough for you, there's tons of plugins that allow you to customize your instance to suit your needs.
+    '';
+    homepage = "https://etherpad.org/";
+    license = licenses.asl20;
+  maintainers = with maintainers; [ minion3665 ];
+  };
 }

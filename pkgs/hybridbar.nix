@@ -11,7 +11,6 @@
 , cmake
 , glib
 , ninja
-, hybridbar
 }: stdenv.mkDerivation rec {
   pname = "Hybridbar";
   version = "1.0.0";
@@ -29,4 +28,11 @@
 
   buildInputs = [ libgee libglibutil.dev gtk3.dev gtk-layer-shell glib.dev ];
   nativeBuildInputs = [ meson vala cmake pkg-config ninja ];
+
+  meta = with lib; {
+    description = "A status bar focused on wlroots Wayland compositors";
+    homepage = "https://github.com/vars1ty/HybridBar";
+    license = licenses.mit;
+    maintainers = with maintainers; [ minion3665 ];
+  };
 }

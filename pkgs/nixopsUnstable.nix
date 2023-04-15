@@ -1,1 +1,0 @@
-{ packageSets, ... }: packageSets.minion.nixopsUnstable

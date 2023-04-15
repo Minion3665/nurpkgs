@@ -17,7 +17,6 @@
   analitza = pkgs.callPackage ./pkgs/analitza.nix { };
   codeium-vim = pkgs.callPackage ./pkgs/codeium-vim.nix { };
   csharp-ls = pkgs.callPackage ./pkgs/csharp-ls.nix { };
-  enso = pkgs.callPackage ./pkgs/enso.nix { };
   etherpad = pkgs.callPackage ./pkgs/etherpad.nix { };
   figma = pkgs.callPackage ./pkgs/figma.nix { };
   git-conflict-nvim = pkgs.callPackage ./pkgs/git-conflict-nvim.nix { };
@@ -25,17 +24,15 @@
   kalgebra = pkgs.callPackage ./pkgs/kalgebra.nix { };
   monocraft = pkgs.callPackage ./pkgs/monocraft.nix { };
   nerdfonts-glyphs = pkgs.callPackage ./pkgs/nerdfonts-glyphs.nix { };
-  nixopsUnstable = pkgs.callPackage ./pkgs/nixopsUnstable.nix { };
   nvim-scrollbar = pkgs.callPackage ./pkgs/nvim-scrollbar.nix { };
   octicons = pkgs.callPackage ./pkgs/octicons.nix { };
   picom-next = pkgs.callPackage ./pkgs/picom-next.nix { };
   run-keepass = pkgs.callPackage ./pkgs/run-keepass.nix { };
   sfs-select = pkgs.callPackage ./pkgs/sfs-select.nix { };
   show = pkgs.callPackage ./pkgs/show.nix { };
-  tcount = pkgs.callPackage ./pkgs/tcount.nix { };
+  /* tcount = pkgs.callPackage ./pkgs/tcount.nix { }; */
   tomlplusplus = pkgs.callPackage ./pkgs/tomlplusplus.nix { };
   vim-ctrlspace = pkgs.callPackage ./pkgs/vim-ctrlspace.nix { };
-  vlock = pkgs.callPackage ./pkgs/vlock.nix { };
   waycorner = pkgs.callPackage ./pkgs/waycorner.nix { };
   wiki-vim = pkgs.callPackage ./pkgs/wiki-vim.nix { };
 }

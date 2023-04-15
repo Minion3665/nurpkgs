@@ -1,4 +1,5 @@
 { rustPlatform
+, lib
 , fetchFromGitHub
 , cmake
 , pkg-config
@@ -37,4 +38,14 @@ rustPlatform.buildRustPackage rec {
   postFixup = ''
     patchelf --add-needed ${wayland}/lib/libwayland-client.so $out/bin/waycorner
   '';
+
+  meta = with lib; {
+    description = "Hot corners for Wayland";
+    longDescription = ''
+      Hot corners for Wayland. Create anchors in the corners of your monitors and execute a command of your choice.
+    '';
+    homepage = "https://github.com/AndreasBackx/waycorner";
+    license = licenses.mit;
+    maintainers = with maintainers; [ minion3665 ];
+  };
 }

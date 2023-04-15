@@ -136,5 +136,6 @@ stdenv.mkDerivation {
     # While the container application is GPL-2.0,
     # Figma itself (running in the application) is nonFree.
     license = licenses.unfree;
+    maintainers = [ maintainers.minion3665 ];
   };
 }

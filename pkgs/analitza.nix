@@ -1,4 +1,5 @@
 { stdenv
+, lib
 , #qt5-declarative,
   libsForQt5
 , extra-cmake-modules
@@ -25,4 +26,16 @@ stdenv.mkDerivation {
     libsForQt5.qt5.qttools
     eigen
   ];
+
+  meta = with lib; {
+    description = "KDE Mathematical Library";
+    longDescription = ''
+      Analitza is a library that work with mathematical objects. Analitza add mathematical features to your program, such as symbolic computations and some numerical methods; for instance the library can parse mathematical expressions and let you evaluate and draw them.
+
+      Analitza is based on a subset of Mathematical Markup Language (MathML) Version 2.0 so for instance the parser maintains structures that are mapped with a MathML content tag and thus can generate a MathML presentation for the current expression. This means also that all modules of the library are based implicitly on MathML.
+    '';
+    homepage = "https://api.kde.org/legacy/4.14-api/kdeedu-apidocs/analitza/html/index.html";
+    license = licenses.lgpl2Plus;
+  maintainers = with maintainers; [ minion3665 ];
+  };
 }
