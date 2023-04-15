@@ -40,5 +40,6 @@ stdenv.mkDerivation rec {
     homepage = "https://apps.kde.org/en-gb/kalgebra/";
     license = licenses.lgpl2Plus;
     maintainers = with maintainers; [ minion3665 ];
+    broken = true; # Dependency locking issues with extra-cmake-modules
   };
 }
