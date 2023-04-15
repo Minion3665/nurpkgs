@@ -47,5 +47,6 @@ rustPlatform.buildRustPackage rec {
     homepage = "https://github.com/AndreasBackx/waycorner";
     license = licenses.mit;
     maintainers = with maintainers; [ minion3665 ];
+    broken = true; # NUR cannot use the cargo.lock file like this 
   };
 }
