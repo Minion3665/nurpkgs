@@ -8,7 +8,7 @@
 
 { pkgs ? import <nixpkgs> { } }:
 
-{
+rec {
   # The `lib`, `modules`, and `overlay` names are special
   lib = import ./lib { inherit pkgs; }; # functions
   modules = import ./modules; # NixOS modules
@@ -21,7 +21,7 @@
   figma = pkgs.callPackage ./pkgs/figma.nix { };
   git-conflict-nvim = pkgs.callPackage ./pkgs/git-conflict-nvim.nix { };
   hybridbar = pkgs.callPackage ./pkgs/hybridbar.nix { };
-  kalgebra = pkgs.callPackage ./pkgs/kalgebra.nix { };
+  kalgebra = pkgs.callPackage ./pkgs/kalgebra.nix { inherit analitza; };
   monocraft = pkgs.callPackage ./pkgs/monocraft.nix { };
   nerdfonts-glyphs = pkgs.callPackage ./pkgs/nerdfonts-glyphs.nix { };
   nvim-scrollbar = pkgs.callPackage ./pkgs/nvim-scrollbar.nix { };

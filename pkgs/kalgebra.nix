@@ -1,5 +1,10 @@
-{ pkgs, lib
-}: with pkgs; let
+{ analitza
+, qt5
+, stdenv
+, lib
+, extra-cmake-modules
+}:
+let
   hash = "e82b59795985540062f4c00e582dc42e8b8358e8";
 in
 stdenv.mkDerivation rec {
