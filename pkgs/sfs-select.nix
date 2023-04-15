@@ -78,5 +78,6 @@ It has both a GUI (for casual use) and a CLI (scripting, desktop shortcuts,
     homepage = "https://www.unix-ag.uni-kl.de/~t_schmid/sfs-select/";
     license = licenses.gpl3Plus;
     maintainers = with maintainers; [ minion3665 ];
+    broken = true; # Cannot be evaluated in restricted mode as it needs to download from unix-ag.uni-kl.de
   };
 }
