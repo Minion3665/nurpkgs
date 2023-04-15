@@ -49,6 +49,7 @@ stdenv.mkDerivation rec {
     '';
     homepage = "https://etherpad.org/";
     license = licenses.asl20;
-  maintainers = with maintainers; [ minion3665 ];
+    maintainers = with maintainers; [ minion3665 ];
+    broken = true;
   };
 }
